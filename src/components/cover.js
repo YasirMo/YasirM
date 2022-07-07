@@ -1,15 +1,9 @@
 import { Box, Center, Container, Flex } from "@chakra-ui/react";
 import Contacts from "./contacts";
-import dynamic from 'next/dynamic'
 import { ScrollDown } from "./scroll-down";
 import { Subtitle } from "./subtitle";
 import { Title } from "./title";
-import VoxelDogLoader from '../components/voxel-dog-loader'
 
-const LazyVoxelDog = dynamic(() => import('../components/voxel-dog'), {
-  ssr: false,
-  loading: () => <VoxelDogLoader />
-})
 
 export function Cover() {
   return (
@@ -25,11 +19,12 @@ export function Cover() {
           <Box>
             <Title/>
             <Subtitle />
-            <Contacts/>
-          </Box><LazyVoxelDog/>
+            <Contacts/> 
+          </Box>
+         
         </Flex>
       </Center>
-      <ScrollDown />  
+      <ScrollDown /> 
     </Container>
   );
 }
