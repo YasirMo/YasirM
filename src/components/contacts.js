@@ -50,7 +50,7 @@ function Contacts() {
             <Link href="https://www.linkedin.com/in/yasirmo/" isExternal>
               <Icon as={FaLinkedin} boxSize="32px" _hover={{ color: "gray.500" }} />
             </Link>
-            <Link href="mailto:yasirmo233@gmail.com?subject=Lets Connect❤️!" isExternal>
+            <Link href="mailto:yasirmo233@gmail.com?subject=Lets Connect ❤️" isExternal>
               <Icon as={MdEmail} boxSize="36px" _hover={{ color: "gray.500" }} />
             </Link>
           </HStack>

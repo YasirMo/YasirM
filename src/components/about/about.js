@@ -12,7 +12,7 @@ function about() {
       fontWeight="bold"
       overflowWrap="initial"
       pb="50"
-      >About</Text>
+      > About</Text>
      
         <Flex columnGap="80px" justify="center" >
             <Picture/>

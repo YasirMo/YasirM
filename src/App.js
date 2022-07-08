@@ -1,19 +1,36 @@
 import { IconButton } from "@chakra-ui/button"
+import './Styles/App.css'
 import {Flex, VStack,Heading,Spacer, Link} from "@chakra-ui/layout"; 
 import { useColorMode } from "@chakra-ui/color-mode";
 import { FaSun, FaMoon, FaGithub } from 'react-icons/fa'
 import { Cover } from  './components/cover'
 import About from './components/about/about'
+import { useEffect, useState } from "react";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 function App() {
+
+  let [loading, setLoading] = useState(true);
+ 
+  useEffect(()=> {
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    }, 2000)
+  }, [])
 
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
   return (
-    <VStack p={6}>
+    <> 
+      { 
+      loading ?
+      <PacmanLoader color={"#3182CE"} loading={loading}  size={100} className="PacMan"/>
+      :
+       <VStack p={6}>
       <Flex w="100%">
-        <Heading             as="h2"
+        <Heading   as="h2"
         fontSize="5xl"
         lineHeight="none"
         >
@@ -29,6 +46,9 @@ function App() {
           <Cover></Cover>
           <About/>
           </VStack>
+    }
+   
+          </>
   );
 }
 

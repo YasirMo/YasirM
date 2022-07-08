@@ -19,7 +19,7 @@ export function Title() {
       pb="10px"
       fontSize={{ base: "3xl", sm: "4xl", lg: "5xl", xl: "6xl" }}
       animation={`${fadeIn} 1s`}>
-     👋🏽 Hi, I am Yasir Mo
+     👋🏽 Hi, I am Yasir 
     </Heading>
   );
 }
