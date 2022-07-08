@@ -48,7 +48,7 @@ function Contacts() {
           onClick={onToggle}
           animation={`${fadeIn} 1s`}
         >
-          Get in touch
+          Let's Connect ❤️
         </Button>
         <ScaleFade in={isOpen}>
           <HStack spacing={4}>
