@@ -1,7 +1,6 @@
 import { useColorMode } from '@chakra-ui/color-mode'
-import { Image } from '@chakra-ui/image';
-import { Stack, Circle, Box, Text } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
+import { FaLinkedin } from 'react-icons/fa'
 import React from 'react'
 import {
     Button,
@@ -53,8 +52,8 @@ function Contacts() {
         </Button>
         <ScaleFade in={isOpen}>
           <HStack spacing={4}>
-            <Link href="https://github.com/YasirMo" isExternal>
-              <Icon as={FaGithub} boxSize="32px" _hover={{ color: "gray.500" }} />
+            <Link href="https://www.linkedin.com/in/yasirmo/" isExternal>
+              <Icon as={FaLinkedin} boxSize="32px" _hover={{ color: "gray.500" }} />
             </Link>
             <Link href="mailto:yasirmo233@gmail.com?subject=Lets Connect❤️!" isExternal>
               <Icon as={MdEmail} boxSize="36px" _hover={{ color: "gray.500" }} />

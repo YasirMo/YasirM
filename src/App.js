@@ -1,8 +1,7 @@
 import { IconButton } from "@chakra-ui/button"
-import {Flex, VStack,Heading,Spacer} from "@chakra-ui/layout"; 
+import {Flex, VStack,Heading,Spacer, Link} from "@chakra-ui/layout"; 
 import { useColorMode } from "@chakra-ui/color-mode";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa'
-import Profile from'./components/profile'
 import { Cover } from  './components/cover'
 
 function App() {
@@ -10,9 +9,8 @@ function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
-  
   return (
-    <VStack p={5}>
+    <VStack p={6}>
       <Flex w="100%">
         <Heading             as="h2"
         fontSize="5xl"
@@ -21,12 +19,13 @@ function App() {
        Yasir Mo        
         </Heading>
       <Spacer></Spacer>
-      <IconButton icon={<FaLinkedin />} isRound='true' ></IconButton>
+      
+      <Link href="https://github.com/YasirMo" isExternal> 
         <IconButton ml={2} icon={<FaGithub />} isRound='true' ></IconButton>
+        </Link>
         <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>  
           </Flex>
           <Cover></Cover>
-          <Profile></Profile>
           </VStack>
   );
 }
