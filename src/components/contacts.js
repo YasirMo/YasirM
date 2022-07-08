@@ -1,5 +1,3 @@
-import { useColorMode } from '@chakra-ui/color-mode'
-import { useMediaQuery } from '@chakra-ui/media-query';
 import { FaLinkedin } from 'react-icons/fa'
 import React from 'react'
 import {
@@ -12,7 +10,7 @@ import {
     useDisclosure,
   } from "@chakra-ui/react";
   import { keyframes } from "@emotion/react";
-  import { FaArrowRight, FaGithub } from "react-icons/fa";
+  import { FaArrowRight } from "react-icons/fa";
   import { MdEmail } from "react-icons/md";
 
 function Contacts() {
@@ -29,10 +27,7 @@ function Contacts() {
 
     const { isOpen, onToggle } = useDisclosure();
 
-    const { colorMode } = useColorMode();
-    const isDark = colorMode === "dark";
-
-    const [isNotSmallerScreen] = useMediaQuery("(min-width: 600px)");
+   
 
     return (
         <Flex gap="20px">

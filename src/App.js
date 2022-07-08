@@ -1,8 +1,9 @@
 import { IconButton } from "@chakra-ui/button"
 import {Flex, VStack,Heading,Spacer, Link} from "@chakra-ui/layout"; 
 import { useColorMode } from "@chakra-ui/color-mode";
-import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaSun, FaMoon, FaGithub } from 'react-icons/fa'
 import { Cover } from  './components/cover'
+import About from './components/about/about'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>  
           </Flex>
           <Cover></Cover>
+          <About/>
           </VStack>
   );
 }
