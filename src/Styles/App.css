@@ -1,7 +1,10 @@
 
+
 .PacMan{
-    position: absolute;
-    z-index: 5;
-    left: 38%;
-    margin-top: 20%;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100% !important;
+   height: 100vh !important;
 }

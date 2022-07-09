@@ -6,7 +6,8 @@ import { FaSun, FaMoon, FaGithub } from 'react-icons/fa'
 import { Cover } from  './components/cover'
 import About from './components/about/about'
 import { useEffect, useState } from "react";
-import PacmanLoader from "react-spinners/PacmanLoader";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
+;
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    }, 2000)
+    }, 2300)
   }, [])
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -26,7 +27,7 @@ function App() {
     <> 
       { 
       loading ?
-      <PacmanLoader color={"#3182CE"} loading={loading}  size={100} className="PacMan"/>
+      <ClimbingBoxLoader  color={"#3182CE"} loading={loading}  size={30} className="PacMan"  />
       :
        <VStack p={6}>
       <Flex w="100%">
