@@ -4,7 +4,6 @@ import { ScrollDown } from "./scroll-down";
 import { Subtitle } from "./subtitle";
 import { Title } from "./title";
 
-
 export function Cover() {
   return (
     <Container as="section" maxW="8xl" minH="100vh" h="100vh" p="40px">
@@ -21,7 +20,6 @@ export function Cover() {
             <Subtitle />
             <Contacts/> 
           </Box>
-         
         </Flex>
       </Center>
       <ScrollDown /> 

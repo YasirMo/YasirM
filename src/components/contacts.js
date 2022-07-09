@@ -13,6 +13,8 @@ import {
   import { FaArrowRight } from "react-icons/fa";
   import { MdEmail } from "react-icons/md";
 
+
+
 function Contacts() {
     const fadeIn = keyframes(`
   0% {
